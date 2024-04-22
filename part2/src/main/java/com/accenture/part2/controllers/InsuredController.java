@@ -18,7 +18,6 @@ import java.util.Objects;
 @RestController
 @RequestMapping("/insured")
 public class InsuredController {
-    private static final String QR_CODE_IMAGE_PATH = "./src/main/resources/static/img/QRCode.png";
     @Autowired
     TimeslotService timeslotService;
     @Autowired
@@ -92,4 +91,6 @@ public class InsuredController {
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error! This insured with AMKA: " + insuredAmka + ", doesn't exists!");
 
     }
+
+
 }
